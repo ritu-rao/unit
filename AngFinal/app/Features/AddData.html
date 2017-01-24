@@ -1,0 +1,33 @@
+<div class="container">
+<div class="container">      
+<form name="FormData" border="1px" novalidate ng-submit="FormData.$valid && login.submit()">
+<div class="form-group">
+<p>Title:
+<span>
+<input type="text"  class="form-control" id="title" name="title" ng-model=books.title required>
+<span style="color:red" ng-show="FormData.title.$touched && FormData.title.$invalid">*</span></input>
+</span>
+</p>
+
+<p>Year:
+<span>
+<input type="number" class="form-control" id="year" name="year" ng-model=books.year required min="1980" max="2017">
+<span style="color:red" ng-show="FormData.year.$touched && FormData.year.$invalid">*</span></input>
+</span>
+</p>
+
+<P>Favorite:
+<input type="checkbox"  name="favorite" id="favorite" ng-model=books.favorite required>
+<span style="color:red" ng-show="FormData.favorite.$touched && FormData.favorite.$invalid">*</span></input>
+</span>
+</p>
+
+<p>    
+<button type="submit" class="btn btn-success"  ng-click ="addDetails()">Submit</button>
+</p>
+</div>
+</form>
+</div>
+<div>
+</body>
+</html>

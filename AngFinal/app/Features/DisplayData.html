@@ -1,0 +1,18 @@
+<div class="container">
+    <table border="1px" width="50%" class="table table-hover">
+    <tr>
+        <th>SerialNo </th>
+        <th>Title </th>
+        <th>Year </th>
+        <th>Favroite </th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="detail in data">
+        <td ><a href="#UpdateData/{{detail.id}}" value="update">{{detail.id}}</a></td>
+        <td>{{detail.title}}</td>
+        <td>{{detail.year}}</td>
+        <td>{{detail.favorite}}</td>
+        <td><input type="button" value="Delete" class="btn btn-success" ng-click="DelData(detail.id)"></td>
+    </tr>
+</table>
+</div>
